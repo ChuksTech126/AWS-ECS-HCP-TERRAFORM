@@ -287,10 +287,10 @@ resource "aws_ecs_service" "web_service" {
     weight           = 100
   }
 
-  deployment_configuration {
+  
     maximum_percent         = 200
     minimum_healthy_percent = 50
-  }
+  
 
   depends_on = [
     aws_ecs_cluster_capacity_providers.main,
